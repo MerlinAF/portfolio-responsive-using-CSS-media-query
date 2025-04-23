@@ -1,0 +1,148 @@
+/* Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*body content font style*/
+body {
+  font-family: 'Helvetica';
+  padding: 20px;
+  background-color: #f0eeee;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*header style*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*unordered list style*/
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+/*ordered list style */
+nav ol {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+/*navigation link style*/
+nav a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+/* for pointer */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+ /*profile image styling*/
+.profile-img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: 10px 0;
+}
+
+/*projects list styling*/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+/*form input style*/
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*button style*/
+button {
+  padding: 10px 15px;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*  Media Queries  */
+
+/* Tablet View: 769px - 1024px */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+}
+
+/* Mobile View: Up to 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+  }
+}
